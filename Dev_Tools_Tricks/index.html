@@ -18,28 +18,63 @@
     }
 
     // Regular
+    console.log('Hello');
 
-    // Interpolated
+    // Interpolated ( put the secon parameters in place of %s)
+    console.log('Hello I am a %s string', 'php');
 
-    // Styled
+    // Styled (%c let you add some css attribute)
+    console.log('%c I am some great text', 'font-size: 32px');
 
-    // warning!
+    // warning! ( give a warning)
+    console.warn('OH NOOOOO');
 
-    // Error :|
+    // Error :|(give an error)
+    console.error('carreful !');
 
     // Info
+    console.info('mars is not habitable ! ');
 
-    // Testing
+    // Testing(test if things are true)
+    console.assert(1 === 2, 'That is wrong');
 
-    // clearing
+    // clearing(clear the console(if u want some hot mess with your coworkers haha))
+    //console.clear();
 
     // Viewing DOM Elements
+    const p = document.querySelector('p');
+
+    console.log(p);
 
     // Grouping together
+    dogs.forEach(dog=>{
+        console.group(`${dog.name}`);
+        console.log(`this is ${dog.name}`);
+        console.log(`${dog.name} is ${dog.age} years old `);
+        console.groupEnd(`${dog.name}`);
+    });
 
-    // counting
+    // counting(count how many times you use an élément)
+    console.count('bipbip');
+    console.count('bipbip');
+    console.count('bipbip');
+    console.count('Coyotte');
+    console.count('Coyotte');
+    console.count('Coyotte');
+    console.count('bipbip');
+    console.count('bipbip');
+    console.count('Coyotte');
+    console.count('Coyotte');
+    console.count('Coyotte');
 
-    // timing
+    // timing(see how long an action takes)
+    console.time('fechting data');
+    fetch('https://api.github.com/users/Harrisonfrn')
+        .then(data => data.json())
+        .then(data => {
+            console.timeEnd('fechting data');
+            console.log(data);
+        })
 
   </script>
 </body>
